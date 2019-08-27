@@ -3,3 +3,4 @@ node_modules
 /es
 npm-debug.log
 docs/build.*
+yarn-error.log
