@@ -8,25 +8,23 @@ export const ENTER_TIMEOUT = 500;
 export const EXIT_TIMEOUT = 300;
 
 const AlertContainer = ({ position = "top-right", children, classes }) => {
-	return (
-		<div className={`${classes.container} ${classes[position]}`}>
-			<TransitionGroup>
-				{Children.map(
-					children,
-					child =>
-						child ? (
-							<AlertTransition key={child.props.id}>
-								{cloneElement(child)}
-							</AlertTransition>
-						) : null
-				)}
-			</TransitionGroup>
-		</div>
-	);
+  return (
+    <div className={`${classes.container} ${classes[position]}`}>
+      <TransitionGroup>
+        {Children.map(children, (child) =>
+          child ? (
+            <AlertTransition key={child.props.id}>
+              {cloneElement(child)}
+            </AlertTransition>
+          ) : null
+        )}
+      </TransitionGroup>
+    </div>
+  );
 };
 
 export const PropTypes = {
-	position: oneOf(["top-right", "top-left", "bottom-right", "bottom-left"])
+  position: oneOf(["top-right", "top-left", "bottom-right", "bottom-left"]),
 };
 
 AlertContainer.propTypes = PropTypes;

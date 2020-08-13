@@ -1,5 +1,5 @@
 {
-  "name": "react-notifier",
+  "name": "@indicado/react-notifier",
   "version": "1.0.0",
   "prettier": "@walrusnetwork/prettier-config",
   "description": "A react component to show growl-like notifications using bootstrap alerts",
@@ -42,6 +42,7 @@
     "react": "^16.13.1"
   },
   "devDependencies": {
+    "@walrusnetwork/prettier-config": "^1.0.0",
     "babel-cli": "6.x",
     "babel-loader": "6.x",
     "babel-plugin-transform-export-extensions": "6.x",
@@ -51,9 +52,15 @@
     "component-playground": "3.x",
     "cross-env": "^4.0.0",
     "css-loader": "0.25.x",
-    "eslint": "3.x",
+    "eslint": "^3.19.0",
     "eslint-config-civicsource": "6.x",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
     "json-loader": "0.5.x",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "raw-loader": "0.5.x",
     "react": ">=16.3 <18",
     "react-dom": "16.x",
@@ -62,5 +69,10 @@
     "style-loader": "0.13.x",
     "webpack": "2.x",
     "webpack-dev-server": "2.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
