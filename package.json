@@ -33,13 +33,13 @@
     "url": "https://github.com/Indicardo/react-notifier/issues"
   },
   "dependencies": {
-    "prop-types": "15.x",
-    "react-jss": ">= 8 <9",
-    "react-transition-group": "2.x",
-    "toetag": "3.x"
+    "prop-types": "^15.7.2",
+    "react-jss": "^10.3.0",
+    "react-transition-group": "^4.4.1",
+    "toetag": "^3.3.7"
   },
   "peerDependencies": {
-    "react": ">=15 <17"
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "babel-cli": "6.x",
